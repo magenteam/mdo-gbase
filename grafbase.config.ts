@@ -7,7 +7,7 @@ const g = graph.Standalone()
 
 const stripe = connector.OpenAPI('Stripe', {
   schema:
-    'https://raw.githubusercontent.com/magenteam/Eshopper/master/openapi-doc.json',
+    'https://github.com/magenteam/mdo-gbase/blob/main/demo-spa.json',
   headers: (headers) => {
     headers.set('Authorization', { forward: 'Authorization' })
   }
