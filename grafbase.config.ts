@@ -10,7 +10,8 @@ const stripe = connector.OpenAPI('Stripe', {
     'https://raw.githubusercontent.com/magenteam/Eshopper/master/openapi-doc.json',
   headers: (headers) => {
     headers.set('Authorization', { forward: 'Authorization' })
-  }
+  },
+  transforms: { queryNaming: 'OPERATION_ID' }
 })
 
 g.datasource(stripe)
