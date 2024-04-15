@@ -1,0 +1,12 @@
+extend schema
+  @openapi(
+    name: "Stripe"
+    namespace: true
+    schema: "https://raw.githubusercontent.com/magenteam/Eshopper/master/demo-spa.json"
+    transforms: {
+      queryNaming: OPERATION_ID
+    }
+    headers: [
+      { name: "Authorization", forward: "Authorization" }
+    ]
+  )
