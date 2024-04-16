@@ -9,7 +9,7 @@ const stripe = connector.OpenAPI('Stripe', {
   schema:
     'https://raw.githubusercontent.com/stripe/openapi/master/openapi/spec3.json',
   headers: headers => {
-    headers.set('Authorization', `Bearer ${g.env('STRIPE_API_KEY')}`)
+    headers.set('Authorization', { forward: 'Authorization' })
   },
 })
 
