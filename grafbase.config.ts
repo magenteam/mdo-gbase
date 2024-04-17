@@ -17,17 +17,4 @@ g.datasource(stripe)
 
 export default config({
   graph: g,
-  cache: {
-    rules: [
-      {
-        types: ['Query'],
-        maxAge: 60
-      }
-    ]
-  },
-  auth: {
-    rules: (rules) => {
-      rules.public()
-    }
-  }
 })
