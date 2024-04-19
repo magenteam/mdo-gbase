@@ -12,7 +12,6 @@ const stripe = connector.OpenAPI('Stripe', {
 
 g.datasource(stripe)
 
-
 export default config({
   graph: g,
 })
