@@ -8,6 +8,9 @@ const stripe = connector.OpenAPI('Stripe', {
   headers: headers => {
     headers.set('Authorization', { forward: 'Authorization' })
   },
+  transforms: {
+      queryNaming: OPERATION_ID
+    },
 })
 
 g.datasource(stripe)
