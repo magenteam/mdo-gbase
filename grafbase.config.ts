@@ -4,7 +4,7 @@ const g = graph.Standalone()
 
 const stripe = connector.OpenAPI('Stripe', {
   schema:
-    'https://raw.githubusercontent.com/magenteam/mdo-gbase/main/demo-spa.json',
+    'https://spartacus-demo.eastus.cloudapp.azure.com:8443/occ/v2/api-docs',
   headers: headers => {
     headers.set('Authorization', { forward: 'Authorization' })
   },
