@@ -4,7 +4,7 @@ const g = graph.Standalone()
 
 const stripe = connector.OpenAPI('Stripe', {
   schema:
-    'https://spartacus-demo.eastus.cloudapp.azure.com:8443/occ/v2/api-docs',
+    'https://raw.githubusercontent.com/magenteam/Eshopper/master/local.json',
   headers: headers => {
     headers.set('Authorization', { forward: 'Authorization' })
   },
