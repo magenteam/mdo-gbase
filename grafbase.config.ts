@@ -8,9 +8,6 @@ const stripe = connector.OpenAPI('Stripe', {
   headers: headers => {
     headers.set('Authorization', `Bearer ${g.env('STRIPE_API_KEY')}`)
   },
-  transforms: schema => {
-    schema.queryNaming('OPERATION_ID')
-  },
 })
 
 g.datasource(stripe)
