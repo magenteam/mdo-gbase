@@ -4,9 +4,9 @@ const g = graph.Standalone()
 
 const stripe = connector.OpenAPI('Stripe', {
   schema:
-    'https://raw.githubusercontent.com/magenteam/Eshopper/master/local.json',
+    'https://raw.githubusercontent.com/magenteam/mdo-gbase/main/api-docs.json',
   headers: headers => {
-    headers.set('Authorization', `Bearer ${g.env('STRIPE_API_KEY')}`)
+    headers.set('Authorization', { forward: 'Authorization' })
   },
 })
 
