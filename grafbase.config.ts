@@ -4,9 +4,9 @@ const g = graph.Standalone()
 
 const stripe = connector.OpenAPI('Stripe', {
   schema:
-    'https://raw.githubusercontent.com/sap-accelerator-sqli/sap-commerce/main/api-docs.json?token=GHSAT0AAAAAACRYYYJSILJEYM7HNIG6AHRUZRTXW5A',
+    'https://github.com/sap-accelerator-sqli/store-front/blob/main/api-docs.json',
   headers: headers => {
-    headers.set('Authorization', { forward: 'Authorization' })
+    headers.set('Authorization', `Bearer ${g.env('STRIPE_API_KEY')}`)
   },
 })
 
