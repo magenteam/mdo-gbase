@@ -49862,10 +49862,16 @@
         "type": "object",
         "properties": {
           "code": {
-            "type": "string"
+            "type": "string",
+            "description": "Code of Sort"
           },
-          "asc": {
-            "type": "boolean"
+          "name": {
+            "type": "string",
+            "description": "Name of Sort"
+          },
+          "selected": {
+            "type": "boolean",
+            "description": "Flag stating when Sort is selected"
           }
         },
         "description": "Sort option"
